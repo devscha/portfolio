@@ -18,7 +18,7 @@ import imgPeekDark from "../assets/graphicWorks/Mascot Teaser.svg";
 import imgPeekCherry from "../assets/graphicWorks/Mascot Reveal.svg";
 import imgErika from "../assets/graphicWorks/FINAL DRAFT_ APPROVED !.svg";
 import imgPup from "../assets/graphicWorks/EVENTS & HOLIDAY.svg"; 
-import imgEnvelope from "../assets/graphicWorks/hALLOWEEN SPECIAL PUBMAT.svg";
+import imgEnvelope from "../assets/graphicWorks/HALLOWEEN SPECIAL PUBMAT.svg";
 import imgNokia from "../assets/graphicWorks/HALLOWEEN SPECIAL PUBMAT (1).svg";
 import imgLooking from "../assets/graphicWorks/v3.svg";
 import imgAttention from "../assets/graphicWorks/v2.svg";
