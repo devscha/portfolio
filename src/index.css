@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+/* Google Sans */
+@font-face {
+  font-family: "Google Sans";
+  src: url("./assets/fonts/GoogleSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Google Sans";
+  src: url("./assets/fonts/GoogleSans-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Google Sans";
+  src: url("./assets/fonts/GoogleSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Google Sans";
+  src: url("./assets/fonts/GoogleSans-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Google Sans";
+  src: url("./assets/fonts/GoogleSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Google Sans";
+  src: url("./assets/fonts/GoogleSans-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Display fonts */
+@font-face {
+  font-family: "Gallient";
+  src: url("./assets/fonts/Gallient.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Seafont";
+  src: url("./assets/fonts/Seafont-FreeDemo.otf") format("opentype");
+  font-display: swap;
+}
+
+
+@theme {
+  /* Fonts */
+  --font-sans: "Google Sans", sans-serif;      /* body */
+  --font-heading: "Seafont", sans-serif;       /* headings */
+  --font-sub: "Gallient", sans-serif;          /* subheadings */
+
+  /* Color palette */
+  --color-sky: #ABD2FB;
+  --color-periwinkle: #7692FF;
+  --color-primary: #1B90F0;
+  --color-royal: #1C2BC2;
+  --color-navy: #0A1542;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: #ffffff;
+  color: #000000;
+}
+
+h1, h2 {
+  font-family: var(--font-heading);
+}
+
+h3, h4 {
+  font-family: var(--font-sub);
+}
+
+/* bg: fixed grid, with a blurred white overlay that is hollow in the center */
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(to right, rgba(27, 144, 240, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(27, 144, 240, 0.12) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.grid-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background: radial-gradient(ellipse at center, transparent 25%, rgba(255, 255, 255, 0.7) 85%);
+  -webkit-mask-image: radial-gradient(ellipse at center, transparent 25%, black 80%);
+  mask-image: radial-gradient(ellipse at center, transparent 25%, black 80%);
+}
